@@ -3,67 +3,110 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "japaneast"
         },
         "networkInterfaceName": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "labvm9597"
         },
         "enableAcceleratedNetworking": {
-            "type": "Bool"
+            "type": "Bool",
+            "defaultValue": true
         },
         "networkSecurityGroupName": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "labvm-nsg"
         },
         "networkSecurityGroupRules": {
-            "type": "Array"
+            "type": "Array",
+            "defaultValue": [
+                {
+                    "name": "RDP",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "3389"
+                    }
+                }
+            ]
         },
         "subnetName": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "default"
         },
         "virtualNetworkName": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "labvm_group-vnet"
         },
         "addressPrefixes": {
-            "type": "Array"
+            "type": "Array",
+            "defaultValue": [
+                "10.0.0.0/24"
+            ]
         },
         "subnets": {
-            "type": "Array"
+            "type": "Array",
+            "defaultValue": [
+                {
+                    "name": "default",
+                    "properties": {
+                        "addressPrefix": "10.0.0.0/24"
+                    }
+                }
+            ]
         },
         "publicIpAddressName": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "labvm-ip"
         },
         "publicIpAddressType": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "Dynamic"
         },
         "publicIpAddressSku": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "Basic"
         },
         "virtualMachineName": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "labvm"
         },
         "virtualMachineComputerName": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "labvm"
         },
         "virtualMachineRG": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "labvm_group"
         },
         "osDiskType": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "Premium_LRS"
         },
         "virtualMachineSize": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "Standard_D2s_v4"
         },
         "adminUsername": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "azureuser"
         },
         "adminPassword": {
             "type": "SecureString"
         },
         "patchMode": {
-            "type": "String"
+            "type": "String",
+            "defaultValue": "AutomaticByOS"
         },
         "enableHotpatching": {
-            "type": "Bool"
+            "type": "Bool",
+            "defaultValue": false
         }
     },
     "variables": {
