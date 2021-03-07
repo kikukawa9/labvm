@@ -8,4 +8,5 @@ choco install -y microsoft-edge azure-cli az.powershell vscode dotnetcore-sdk mi
 & "C:\Program Files\dotnet\dotnet.exe" tool install -g Microsoft.dotnet-httprepl
 
 # set Edge as default browser
-SetDefaultBrowser.exe HKLM "Microsoft Edge" delay=1000
+# SetDefaultBrowser.exe HKLM "Microsoft Edge" delay=1000
+SetDefaultBrowser.exe edge
