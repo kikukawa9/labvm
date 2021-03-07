@@ -90,8 +90,7 @@
             "defaultValue": "Premium_LRS"
         },
         "virtualMachineSize": {
-            "type": "String",
-            "defaultValue": "Standard_D2s_v4"
+            "type": "String"
         },
         "adminUsername": {
             "type": "String",
