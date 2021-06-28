@@ -2,7 +2,7 @@
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # install packages
-choco install -y microsoft-edge azure-cli az.powershell vscode dotnetcore-sdk microsoftazurestorageexplorer setdefaultbrowser 
+choco install -y microsoft-edge azure-cli az.powershell vscode dotnetcore-sdk microsoftazurestorageexplorer setdefaultbrowser azure-functions-core-tools
 
 # install httprepl
 & "C:\Program Files\dotnet\dotnet.exe" tool install -g Microsoft.dotnet-httprepl
