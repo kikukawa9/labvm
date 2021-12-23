@@ -253,7 +253,7 @@
                         "value": "[parameters('location')]"
                     },
                     "fileUris": {
-                        "value": "https://github.com/kikukawa9/labvm/blob/main/labvm.ps1"
+                        "value": "https://raw.githubusercontent.com/kikukawa9/labvm/main/labvm.ps1"
                     }
                 }
             }
